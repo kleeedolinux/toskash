@@ -15,26 +15,44 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            padding: 20px; /* Added padding for small screens */
+            box-sizing: border-box; /* Ensures padding is included in height */
         }
         h1 {
             color: #4CAF50;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-size: 2em; /* Responsive font size */
         }
         .link-container {
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+            justify-content: center; /* Center the links */
+            gap: 15px; /* Reduced gap for better spacing */
         }
         a {
             text-decoration: none;
             color: white;
             background-color: #4CAF50;
-            padding: 10px 20px;
+            padding: 10px 15px; /* Adjusted padding */
             border-radius: 5px;
-            font-size: 1.1em;
+            font-size: 1em; /* Responsive font size */
             transition: background-color 0.3s;
+            flex: 1 1 150px; /* Flex property to allow links to grow and shrink */
+            text-align: center; /* Center text within the link */
         }
         a:hover {
             background-color: #45a049;
+        }
+
+        /* Media Queries for better responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Smaller font size on small screens */
+            }
+            a {
+                font-size: 0.9em; /* Smaller font size for links */
+                padding: 8px 12px; /* Smaller padding */
+            }
         }
     </style>
 </head>
